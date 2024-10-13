@@ -1,0 +1,250 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Listing Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        .form-container {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .form-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="email"], input[type="number"], input[type="file"], textarea, select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        textarea {
+            height: 100px;
+        }
+        .form-group.upload {
+            display: flex;
+            align-items: center;
+        }
+        .form-group.upload label {
+            flex: 1;
+        }
+        .form-group.upload input[type="file"] {
+            flex: 2;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h2>School Listing Form</h2>
+
+    <form>
+
+        <!-- School Information -->
+        <div class="form-group">
+            <label>School Name</label>
+            <input type="text" required>
+        </div>
+        <div class="form-group upload">
+            <label>School Logo</label>
+            <input type="file" accept="image/*">
+        </div>
+        <div class="form-group">
+            <label>Established Year</label>
+            <input type="number" min="1800" max="2024">
+        </div>
+        <div class="form-group">
+            <label>School Type</label>
+            <input type="text" placeholder="e.g., Play, Primary, Secondary, etc.">
+        </div>
+        <div class="form-group">
+            <label>Board of Education</label>
+            <input type="text" placeholder="e.g., State Board, CBSE, ICSE, etc.">
+        </div>
+
+        <!-- Location Details -->
+        <h3>Location Details</h3>
+        <div class="form-group">
+            <label>Area/Locality</label>
+            <input type="text" required>
+        </div>
+        <div class="form-group">
+            <label>City</label>
+            <input type="text" required>
+        </div>
+        <div class="form-group">
+            <label>State</label>
+            <input type="text" required>
+        </div>
+        <div class="form-group">
+            <label>Pincode</label>
+            <input type="number" required>
+        </div>
+        <div class="form-group">
+            <label>Full Address</label>
+            <textarea required></textarea>
+        </div>
+        <div class="form-group">
+            <label>Google Maps Location (URL)</label>
+            <input type="url">
+        </div>
+
+        <!-- Contact Information -->
+        <h3>Contact Information</h3>
+        <div class="form-group">
+            <label>Contact Person Name</label>
+            <input type="text" required>
+        </div>
+        <div class="form-group">
+            <label>Contact Number</label>
+            <input type="text" required>
+        </div>
+        <div class="form-group">
+            <label>Email Address</label>
+            <input type="email" required>
+        </div>
+        <div class="form-group">
+            <label>Website URL</label>
+            <input type="url">
+        </div>
+
+        <!-- School Description -->
+        <h3>School Description</h3>
+        <div class="form-group">
+            <label>Short Description</label>
+            <textarea required></textarea>
+        </div>
+        <div class="form-group">
+            <label>Detailed Description</label>
+            <textarea></textarea>
+        </div>
+
+        <!-- Academic and Staff Information -->
+        <h3>Academic and Staff Information</h3>
+        <div class="form-group">
+            <label>Academic Results</label>
+            <textarea></textarea>
+        </div>
+        <div class="form-group">
+            <label>Teacher Qualifications</label>
+            <textarea></textarea>
+        </div>
+        <div class="form-group">
+            <label>Student-Teacher Ratio</label>
+            <input type="text">
+        </div>
+        <div class="form-group">
+            <label>School Facilities (Library, Labs, Sports, etc.)</label>
+            <textarea required></textarea>
+        </div>
+
+        <!-- Admission Information -->
+        <h3>Admission Information</h3>
+        <div class="form-group">
+            <label>Admission Process</label>
+            <textarea></textarea>
+        </div>
+        <div class="form-group">
+            <label>Admission Fees</label>
+            <input type="text">
+        </div>
+        <div class="form-group">
+            <label>Admission Dates</label>
+            <input type="text">
+        </div>
+
+        <!-- School Features -->
+        <h3>School Features</h3>
+        <div class="form-group">
+            <label>Medium of Instruction</label>
+            <input type="text" placeholder="e.g., English, Hindi, etc.">
+        </div>
+        <div class="form-group">
+            <label>Co-curricular Activities</label>
+            <textarea></textarea>
+        </div>
+        <div class="form-group">
+            <label>Special Programs</label>
+            <textarea></textarea>
+        </div>
+        <div class="form-group">
+            <label>Facilities for Special Needs</label>
+            <textarea></textarea>
+        </div>
+
+        <!-- School Photos -->
+        <h3>School Photos</h3>
+        <div class="form-group upload">
+            <label>Upload Photos (up to 5)</label>
+            <input type="file" accept="image/*" multiple>
+        </div>
+
+        <!-- School Awards and Recognitions -->
+        <h3>School Awards and Recognitions</h3>
+        <div class="form-group">
+            <label>Awards/Accreditations</label>
+            <textarea></textarea>
+        </div>
+
+        <!-- Additional Services -->
+        <h3>Additional Services</h3>
+        <div class="form-group">
+            <label>After-School Programs</label>
+            <textarea></textarea>
+        </div>
+        <div class="form-group">
+            <label>Transportation Facilities</label>
+            <textarea></textarea>
+        </div>
+        <div class="form-group">
+            <label>Meals/Hostel</label>
+            <textarea></textarea>
+        </div>
+
+        <!-- Promotional Option -->
+        <h3>Promotional Option</h3>
+        <div class="form-group">
+            <label>
+                <input type="checkbox"> Promote your Listing (Paid Option)
+            </label>
+        </div>
+
+        <button type="submit">Submit Listing</button>
+    </form>
+</div>
+
+</body>
+</html>
